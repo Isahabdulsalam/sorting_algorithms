@@ -1,8 +1,8 @@
-#ifndef SORT_H
-#define SORT_H
-#include <stdio.h>
+#ifndef _SORT_H_
+#define _SORT_H_
+
 #include <stddef.h>
-#include <stdlib.h>
+
 /**
  * struct listint_s - Doubly linked list node
  *
@@ -10,11 +10,12 @@
  * @prev: Pointer to the previous element of the list
  * @next: Pointer to the next element of the list
  */
+
 typedef struct listint_s
 {
-    const int n;
-    struct listint_s *prev;
-    struct listint_s *next;
+	const int n;
+	struct listint_s *prev;
+	struct listint_s *next;
 } listint_t;
 
 void print_array(const int *array, size_t size);
@@ -32,4 +33,4 @@ void radix_sort(int *array, size_t size);
 void bitonic_sort(int *array, size_t size);
 void quick_sort_hoare(int *array, size_t size);
 
-#endif
+#endif /* _SORT_H_ */
